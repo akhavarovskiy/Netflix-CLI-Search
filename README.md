@@ -3,10 +3,13 @@
 The following is a python project uses data from the Netflix web search to allow for search functionality through the command line. The project requires a valid Netflix account for functionality. This project can be easily adapted for thorough scraping applications, although Netflix might frown upon that behaviour. 
 
 # How To
-The example.py is an example of the CLI interface and can be used to perform basic searches.
+The search.py is an example of the CLI interface and can be used to perform basic searches.
 
-NetflixCLI.py has 3 variables that need to be populated with cookies that can be fetched from your browser for the script to work. These include `NetflixId`, `SecureNetflixId`, `ProfileId`. The variable names correspond to the required cookie values. This script will use an existing Netflix account as an entry point into the Netflix webpage.  Once a cookies file is generated, the variables will no longer be used.
- 
+The login.py will log you into Netflix and cache to cookies for later reuse.
+
+NetflixCLI.py has a login feature that will generate a cookie for authentication. You can save the cookie to the file of your choice then load it for later authentication. This script will use an existing Netflix account as an entry point into the Netflix webpage. 
+<span style="color:red"> **If you login more than 25 times in a single day. Netflix will block your access to the login page. From witch point you will no longer be able to login to Netflix, for a period of 24 hours. So please cache your cookies and reuse them.** </span>
+
 # Disclaimer
 Do not use this code for any kind of enterprize/heavy bandwidth applications. This could lead to your Netflix account getting banned. Furthermore, Netflix could pursuit trespass to chattels lawsuit for unlawful use of their servers.
 
@@ -67,4 +70,4 @@ Corresponding Web Results
 ![alt text]( /images/ss.png )
 
 # Todo
-- [ ] Add a script to allow for generation of authentication cookies.
+- [ x ] Add a script to allow for generation of authentication cookies.

@@ -8,6 +8,8 @@ if __name__ == "__main__":
         print( '[ Error ] Not enough arguments.' )
         exit()
 
+    netflixCLI.cookies_load( 'cookies' )
+
     for x in netflixCLI.search( sys.argv[1], int(sys.argv[2]) ):
         print( '---------------------------------------------------------' )
         print( x[1] + ' : (' + x[0] + ')' )
